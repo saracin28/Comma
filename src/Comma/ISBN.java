@@ -7,7 +7,7 @@ public class ISBN {
         int b = 0;
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.substring(str.length() - 1).equals("X")) {
+            if (str.substring(i,i+1).equals("X")) {
                 sum = sum + 10 + (a * (10 - i));
             } else {
                 a = Integer.parseInt(str.substring(i, i + 1));
@@ -21,7 +21,7 @@ public class ISBN {
         return false;
     }
     public static void main(String[] args) {
-        System.out.println(check("5-123-45627-1"));
+        System.out.println(check("5-123-45627-X"));
     }
 }
 
